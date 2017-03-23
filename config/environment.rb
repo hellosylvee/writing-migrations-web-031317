@@ -4,6 +4,9 @@ Bundler.require
 Dir[File.join(File.dirname(__FILE__), "../app/models", "*.rb")].each {|f| require f}
 Dir[File.join(File.dirname(__FILE__), "../lib/support", "*.rb")].each {|f| require f}
 
+# Dir[File.join(File.dirname(__FILE__), "../app/models", "student.rb")].each {|f| require f}
+# Dir[File.join(File.dirname(__FILE__), "../lib/support", "connection_adapter.rb")].each {|f| require f}
+
 ENV["SCHOOL_ENV"] ||= "development"
 
 DBRegistry[ENV["SCHOOL_ENV"]].connect!
